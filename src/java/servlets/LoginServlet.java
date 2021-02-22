@@ -33,12 +33,12 @@ public class LoginServlet extends HttpServlet {
             request.setAttribute("password", password);
            
             
-            getServletContext().getRequestDispatcher("/WEB-INF/helloWorldForm.jsp")
+            getServletContext().getRequestDispatcher("/WEB-INF/login.jsp")
                     .forward(request, response);
             return;
         }
         
-        if (username.equals("abe") || username.equals("barb") && password.equals("password")){
+        else if (username.equals("abe") || username.equals("barb") && password.equals("password")){
             getServletContext().getRequestDispatcher("/WEB-INF/home.jsp")
                 .forward(request, response);
         }
